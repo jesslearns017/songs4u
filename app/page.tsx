@@ -722,14 +722,14 @@ export default function Home() {
               placeholder={t.placeholder}
               className="w-full h-40 p-4 border-2 border-purple-200 rounded-lg focus:border-purple-500 focus:outline-none resize-y text-sm bg-white"
               disabled={loading}
-              maxLength={1000}
+              maxLength={500}
             />
             <div className={`absolute bottom-2 right-2 text-xs font-semibold ${
-              prompt.length > 900 ? 'text-red-500' : 
-              prompt.length > 700 ? 'text-orange-500' : 
+              prompt.length > 450 ? 'text-red-500' : 
+              prompt.length > 350 ? 'text-orange-500' : 
               'text-gray-400'
             }`}>
-              {prompt.length}/1000 {prompt.length > 700 && t.longPromptWarning}
+              {prompt.length}/500 {prompt.length > 400 && t.longPromptWarning}
             </div>
           </div>
 
